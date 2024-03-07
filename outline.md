@@ -8,6 +8,7 @@ Strings may be treated as a sequence of characters (as we did in Python).
 Hence, strings have a `length` property and you can iterate through them character by character.
 
 Try running the following code to see what it does (we will cover loops later):
+
 ```dart
   String email = 'UP000001@myport.ac.uk';
   for (int i = 0; i < email.length; i++) {
@@ -18,10 +19,11 @@ Try running the following code to see what it does (we will cover loops later):
 You need to be careful while indexing into strings in Dart.
 Your interpretation of what a character is may be different to how the computer stores this data.
 For example, both of the following printouts return 6 as opposed to the values you may be expecting by looking at the strings:
+
 ```dart
   String name = 'Hergé';
   print('Length of $name is: ${name.length}'); // should be 5?
- 
+
   String animals = '🐱🐶🐸🐰🐹';
   print("Rabbit is the ${animals.indexOf('🐰')}'th animal"); // should be 4?
 ```
@@ -29,11 +31,12 @@ For example, both of the following printouts return 6 as opposed to the values y
 ### Substrings with `substring` and `split`
 
 You can get a substring of a larger string by specifying its start (and optionally its end):
+
 ```dart
   String email = 'UP000001@myport.ac.uk';
   String upNumber = email.substring(2,8);
   print('My UP number is: ' + upNumber); // My UP number is: 000001
- 
+
   String postcode = 'PO13HF';
   print('The last three characters of postcode is ${postcode.substring(4)}');
   // The last two characters of postcode is 3HF
@@ -44,10 +47,11 @@ You can get a substring of a larger string by specifying its start (and optional
 #### `toLowerCase` and `toUpperCase`
 
 Here are some useful operations from the documentation page of the String class that you may find useful:
+
 ```dart
   String name = ('Stella! Hey Stella!');
   print(name.toUpperCase()); // STELLA! HEY STELLA!
- 
+
 
   print(name.toLowerCase()); // stella! hey stella!
 ```
@@ -57,6 +61,7 @@ Here are some useful operations from the documentation page of the String class 
 The `split` method breaks down a string into a list of strings using a pattern (a substring of the bigger string).
 The `join` method does the opposite: it concatenates a list of strings into a single string using a separator.
 This separator and pattern can be an empty strings:
+
 ```dart
   String littleWomen = 'Jo and Beth and Amy and Meg';
   for (String name in littleWomen.split(' and ')) {
@@ -78,6 +83,7 @@ This separator and pattern can be an empty strings:
 #### `startsWith` and `endsWith`
 
 These methods check if a string starts or ends with a given substring:
+
 ```dart
   String email = 'up832240@myport.ac.uk';
   print(email.startsWith('up')); // true
@@ -88,6 +94,7 @@ These methods check if a string starts or ends with a given substring:
 
 To check if a string contains a substring, you can use the `contains` method.
 To find the index of the first occurrence of a substring, you can use the `indexOf` method:
+
 ```dart
     String quote = "You had me at hello.";
 
@@ -147,3 +154,5 @@ To find the index of the first occurrence of a substring, you can use the `index
 ### Sorting with `sort`
 
 ### Using `forEach` and `for-in` loops
+
+Also: https://dart.dev/language/collections#control-flow-operators
