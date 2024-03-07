@@ -29,7 +29,4 @@ void main() {
 
 bool isValidEmail(String email) =>
     email.contains("@") && email.endsWith("port.ac.uk");
-
-bool isValidStudentEmail(String email) {
   
-}
