@@ -1,4 +1,8 @@
 void main() {
+  iterateString('Hello, World!');
+  iterateString('👨‍👩‍👧‍👦');
+  iterateString('Café');
+
   print('Hello, World!');
   List<int> numbers = [1, 2, 3, 4, 5];
   var squares = numbers.map((number) => number * number);
@@ -17,4 +21,11 @@ void main() {
   // Output: Alice is 20 years old
   //         Bob is 25 years old
   //         Charlie is 30 years old
+}
+
+void iterateString(String text) {
+  for (int i = 0; i < text.length; i++) {
+    var char = text[i];
+    print(char);
+  }
 }
