@@ -22,6 +22,18 @@ void main() {
   stringChecker('Hello, World!', 'o');
   stringChecker('Hello, World!', 'Moon');
 
+  String littleWomen = 'Jo and Beth and Amy and Meg';
+  for (String name in littleWomen.split(' and ')) {
+    print(name);
+  }
+
+  String letters = 'abcdefg';
+  List<String> splitted = letters.split('');
+  print(splitted[2]);
+
+  String joined = splitted.join(' ');
+  print(joined);
+
   // print('Hello, World!');
   // List<int> numbers = [1, 2, 3, 4, 5];
   // var squares = numbers.map((number) => number * number);
