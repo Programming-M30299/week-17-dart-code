@@ -3,6 +3,19 @@ void main() {
   iterateString('👨‍👩‍👧‍👦');
   iterateString('Café');
 
+  String postcode = 'PO13HF';
+  int startIndex = 3, endIndex = 5;
+  print('The substring of "$postcode" from $startIndex to $endIndex is ' +
+      postcode.substring(startIndex, endIndex));
+  print('The substring of "$postcode" from $startIndex to the end is ' +
+      postcode.substring(startIndex));
+  print('The last 3 characters of "$postcode" are ' +
+      postcode.substring(postcode.length - 3));
+
+  String line = 'Stella! Hey Stella!';
+  print(line.toUpperCase());
+  print(line.toLowerCase());
+
   stringChecker('Hello, World!', 'World');
   stringChecker('Hello, World!', 'World!');
   stringChecker('Hello, World!', 'Hello, World!');
@@ -37,14 +50,17 @@ void iterateString(String text) {
 }
 
 void stringChecker(String text, String substring) {
-  print('The index of $substring in $text is ${text.indexOf(substring)}');
+  String output =
+      'The index of "$substring" in "$text" is ${text.indexOf(substring)} and ';
 
   if (text.startsWith(substring))
-    print('The text starts with the substring');
+    output += 'the text starts with the substring';
   else if (text.endsWith(substring))
-    print('The text ends with the substring');
+    output += 'the text ends with the substring';
   else if (text.contains(substring))
-    print('The text contains the substring');
+    output += 'the text contains the substring';
   else
-    print('The text does not contain the substring');
+    output += 'the text does not contain the substring';
+
+  print(output);
 }
