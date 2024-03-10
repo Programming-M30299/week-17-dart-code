@@ -4,10 +4,10 @@ void main() {
   String untilGrape = fruits.substring(0, index);
   print(untilGrape); // 🍎,🍌:
 
-  List<String> list = fruits.split(',');
-  print(list); // ['🍎', '🍌:🍇', '🍊;🍐']
-  list = fruits.split(RegExp(r'[:;,]+'));
-  print(list); // ['🍎', '🍌', '🍇', '🍊', '🍐']
+  List<String> split = 'Hi, Hi; Hi'.split(', ');
+  print(split); // ['Hi', 'Hi; Hi']
+  split = 'Hi, Hi; Hi'.split(RegExp(r'[,;]+'));
+  print(split); // ['Hi', 'Hi', ' Hi']
 
   List<String> colours = ['🔵', '⚪', '🔴'];
   String frenchFlag = colours.join('');
