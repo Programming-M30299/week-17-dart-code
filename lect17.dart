@@ -9,7 +9,7 @@ void main() {
   split = 'Hi, Hi; Hi'.split(RegExp(r'[,;]+'));
   print(split); // ['Hi', 'Hi', ' Hi']
 
-  List<String> colours = ['🔵', '⚪', '🔴'];
-  String frenchFlag = colours.join('');
-  print(frenchFlag); // 🔵⚪🔴
+  List<String> colours = ['blue', 'white', 'red'];
+  String flag = colours.join(' ');
+  print(flag); // blue white red
 }
