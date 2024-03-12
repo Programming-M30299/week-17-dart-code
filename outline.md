@@ -107,19 +107,126 @@ To find the index of the first occurrence of a substring, you can use the `index
 
 ## Collections
 
+We've already seen collections in Python. Let's see how they are used in Dart.
+
 ### List
 
 #### Defining a list
+To store the names of our customers in a shop in a list, we can use the following code:
+
+```dart
+  List<String> customers = ['Ştefan', 'Amy', 'Jamila', 'Xiu', 'Amy'];
+  print(customers); // [Ştefan, Amy, jamila, Xiu, Amy]
+```
+
+Pay attention to the type of the list: `List<String>`. This means that the list can only store strings.
+
+You can use the `filled` constructor to create a list of a given length with all elements set to the same value:
+
+```dart
+  List<int> filledList = List.filled(5, 0);
+  print(filledList); // [0, 0, 0, 0, 0]
+  filledList[2] = 3;
+```
 
 #### Accessing elements
 
+We can access and update the elements of the list using the square brackets (same as in Python):
+
+```dart
+  print(customers[2]); // Jamila
+  customers[2] = 'Zeinab';
+  print('3rd customer is now: ${customers[2]}'); // 3rd customer is now: Zeinab
+  int numberOfCustomers = customers.length;
+  print('Last customer is: ${customers[numberOfCustomers - 1]}'); // Last customer is: Amy
+```
+
+Lists have `first` and `last` properties that return the first and last elements of the list, respectively:
+
+```dart
+  print('First customer is: ${customers.first}'); // First customer is: Ştefan
+  print('Last customer is: ${customers.last}'); // Last customer is: Amy
+```
+
 #### Adding and removing elements
 
-#### Iterating over a list using a `for` loop
+There are two ways to add an element to a list: `add` and `insert`
+To remove an element from a list, you can use the `remove` method:
 
-#### Iterating over a list using a `for-in` loop
+```dart
+  customers.add('José');
+  print(customers); // [Ştefan, Amy, Zeinab, Xiu, Amy, José]
 
-#### Multidimensional lists
+  customers.insert(2, 'Mohammed');
+  print(customers); // [Ştefan, Amy, Mohammed, Zeinab, Xiu, Amy, José]
+
+  customers.remove('Amy');
+  print(customers); // [Ştefan, Mohammed, Zeinab, Xiu, Amy, José] (only the first occurrence is removed)
+```
+
+#### Iterating over a list
+
+We've already seen examples of iterating over a list using a `for` loop.
+In this example, we are adding 10 to each element of the list if it is less than 90, and setting it to 100 otherwise:
+```dart
+  List<int> marks = [77, 90, 64, 92, 0];
+  for (int i = 0; i < marks.length; i++) {
+    // We can't have more than 100%
+    if (marks[i] >= 90) {
+      marks[i] = 100;
+    } else {
+      marks[i] += 10;
+    }
+  }
+  print('After +10: $marks'); // After +10: [77, 100, 64, 92, 10]
+```
+
+We can also iterate over a list using a `for-in` loop:
+
+```dart
+  List<int> marks = [77, 90, 64, 92, 0];
+  int sum = 0;
+  for (int mark in marks) {
+    sum += mark;
+  }
+  print('Average mark is: ${sum / marks.length}'); // Average mark is: 64.6
+```
+
+#### Multidimensional lists (advanced)
+
+Lists can contain other lists, which allows you to create multidimensional lists:
+
+```dart
+  List<List<int>> matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+  print(matrix[1][2]); // 6
+```
+
+Notice that we had to specify two indices to retrieve an element from the matrix.
+
+Here is another example which shows how we can update a specific value in a two-dimensional list.
+
+```dart
+  List<List<String>> foodDiary = [
+    ['🧇', '🧆', '🥗'],       // Monday
+    ['🍳', '🍛'],             // Tuesday
+    ['🥯', '🥘', '🥪'],       // Wednesday
+    ['🍩', '🌯', '🍲'],       // Thursday
+    ['🧇', '🌮', '🍣'],       // Friday
+    ['🥞', '🥧', '🍔', '🍟'], // Saturday
+    ['🍪', '🥪', '🍝']        // Sunday
+  ];
+  print('Before: ${foodDiary[5]}'); // Before: [🥞, 🥧, 🍔, 🍟]
+  foodDiary[5][1]='🍕';
+  print('After: ${foodDiary[5]}'); // After: [🥞, 🍕, 🍔, 🍟]
+```
+
+For more information on Lists, refer to the documentation page:
+https://api.flutter.dev/flutter/dart-core/List-class.html
+
 
 ### Set
 
