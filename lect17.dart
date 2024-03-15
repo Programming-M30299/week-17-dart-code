@@ -61,7 +61,7 @@ void listDemo() {
   ];
   print(customers); // [Ştefan, Amy, Jamila, Amy]
   print(customers[2]); // Jamila
-  print(customers[4]); // RangeError (index out of range)
+  // print(customers[4]); // RangeError (index out of range)
 
   List<int> filledList = List.filled(5, 0);
   print(filledList); // [0, 0, 0, 0, 0]
