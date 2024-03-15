@@ -60,12 +60,13 @@ void listDemo() {
     'Amy',
   ];
   print(customers); // [Ştefan, Amy, Jamila, Amy]
+  print(customers[2]); // Jamila
+  print(customers[4]); // RangeError (index out of range)
 
   List<int> filledList = List.filled(5, 0);
   print(filledList); // [0, 0, 0, 0, 0]
   filledList[2] = 3;
 
-  print(customers[2]); // Jamila
   customers[2] = 'Zeinab';
   print('3rd customer is now: ${customers[2]}'); // 3rd customer is now: Zeinab
   int numOfCustomers = customers.length;
