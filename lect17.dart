@@ -3,11 +3,11 @@ void main() {
 
   // stringDemo2(); // Uncomment to run
 
-  iteratingLists(); // Uncomment to run
-
-  multiDimentionalLists(); // Uncomment to run
-
   listDemo(); // Uncomment to run
+
+  // iteratingLists(); // Uncomment to run
+
+  // multiDimentionalLists(); // Uncomment to run
 }
 
 void multiDimentionalLists() {
@@ -37,6 +37,7 @@ void multiDimentionalLists() {
 
 void iteratingLists() {
   List<int> marks = [77, 90, 64, 92, 0];
+  print('Before: $marks'); // Before: [77, 90, 64, 92, 0]
   for (int i = 0; i < marks.length; i++) {
     // We can't have more than 100%
     if (marks[i] >= 90) {
@@ -61,13 +62,14 @@ void listDemo() {
     'Jamila',
     'Amy',
   ];
-  print(customers); // [Ştefan, Amy, Jamila, Amy]
-  print(customers[2]); // Jamila
-  // print(customers[4]); // RangeError (index out of range)
+  print('Customers: $customers'); // Customers: [Ştefan, Amy, Jamila, Amy]
+  print('Customer at index 2: ${customers[2]}'); // Customer at index 2: Jamila
+  // print('Customer at index 4: ${customers[4]}'); // Error
 
   List<int> filledList = List.filled(5, 0);
-  print(filledList); // [0, 0, 0, 0, 0]
+  print('filledList: $filledList'); // filledList: [0, 0, 0, 0, 0]
   filledList[2] = 3;
+  print('filledList after update: $filledList'); // filledList: [0, 0, 3, 0, 0]
 
   customers[2] = 'Zeinab';
   print('3rd customer is now: ${customers[2]}'); // 3rd customer is now: Zeinab
