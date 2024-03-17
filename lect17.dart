@@ -3,7 +3,7 @@ void main() {
 
   // stringDemo2(); // Uncomment to run
 
-  listDemo(); // Uncomment to run
+  // listDemo(); // Uncomment to run
 
   // iteratingLists(); // Uncomment to run
 
@@ -84,14 +84,15 @@ void listDemo() {
   // Last customer is: Amy
 
   customers.add('José');
-  print(customers); // [Ştefan, Amy, Zeinab, Xiu, Amy, José]
+  print('After adding José: $customers'); // [Ştefan, Amy, Zeinab, Amy, José]
 
   customers.insert(2, 'Mohammed');
-  print(customers); // [Ştefan, Amy, Mohammed, Zeinab, Xiu, Amy, José]
+  print(
+      'After inserting Mohammed: $customers'); // [Ştefan, Amy, Mohammed, Zeinab, Amy, José]
 
   customers.remove('Amy');
-  print(customers);
-  // [Ştefan, Mohammed, Zeinab, Xiu, Amy, José] (only the first one is removed)
+  print(
+      'After removing Amy: $customers'); // [Ştefan, Mohammed, Zeinab, Amy, José]
 }
 
 void stringDemo1() {
