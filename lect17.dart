@@ -1,7 +1,7 @@
 void main() {
   // stringDemo1(); // Uncomment to run
 
-  stringDemo2(); // Uncomment to run
+  // stringDemo2(); // Uncomment to run
 
   iteratingLists(); // Uncomment to run
 
@@ -110,7 +110,7 @@ void stringDemo1() {
 
 void stringDemo2() {
   String fruits = '🍎,🍌:🍇,🍊;🍐';
-  print('The string is: $fruits');
+  print('Fruits are: $fruits');
   int index = fruits.indexOf('🍇');
   String untilGrape = fruits.substring(0, index);
   print('Until grape: $untilGrape'); // 🍎,🍌:
