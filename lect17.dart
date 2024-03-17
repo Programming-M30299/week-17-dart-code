@@ -1,11 +1,13 @@
 void main() {
-  // stringDemo(); // Uncomment to run
+  // stringDemo1(); // Uncomment to run
 
-  // listDemo(); // Uncomment to run
+  stringDemo2(); // Uncomment to run
 
-  // iteratingLists(); // Uncomment to run
+  iteratingLists(); // Uncomment to run
 
-  // multiDimentionalLists(); // Uncomment to run
+  multiDimentionalLists(); // Uncomment to run
+
+  listDemo(); // Uncomment to run
 }
 
 void multiDimentionalLists() {
@@ -43,7 +45,7 @@ void iteratingLists() {
       marks[i] += 10;
     }
   }
-  print('After +10: $marks'); // After +10: [77, 100, 64, 92, 10]
+  print('After +10: $marks'); // After +10: [87, 100, 74, 100, 10]
 
   int sum = 0;
   for (int mark in marks) {
@@ -90,18 +92,35 @@ void listDemo() {
   // [Ştefan, Mohammed, Zeinab, Xiu, Amy, José] (only the first one is removed)
 }
 
-void stringDemo() {
+void stringDemo1() {
+  String txt = 'Hello, World!';
+  print('The character at index 7 is: ${txt[7]}'); // W
+  print('Length of greeting: ${txt.length}'); // 13
+
+  String news = 'Breaking News: Moon landing!';
+  print(news);
+  print('The index of "Moon" in the news is: ${news.indexOf('Moon')}'); // 15
+  print('The news contains "News": ${news.contains('News')}'); // true
+  print('The news contains "Moon": ${news.contains('Moon')}'); // true
+  print('The news contains "Mars": ${news.contains('Mars')}'); // false
+  print(
+      'The news starts with "Breaking": ${news.startsWith('Breaking')}'); // true
+  print('The news ends with "landing!": ${news.endsWith('landing!')}'); // true
+}
+
+void stringDemo2() {
   String fruits = '🍎,🍌:🍇,🍊;🍐';
+  print('The string is: $fruits');
   int index = fruits.indexOf('🍇');
   String untilGrape = fruits.substring(0, index);
-  print(untilGrape); // 🍎,🍌:
+  print('Until grape: $untilGrape'); // 🍎,🍌:
 
   List<String> split = 'Hi, Hi; Hi'.split(', ');
-  print(split); // ['Hi', 'Hi; Hi']
-  split = 'Hi, Hi; Hi'.split(RegExp(r'[,;]+'));
-  print(split); // ['Hi', 'Hi', ' Hi']
+  print('splitting with string: $split'); // ['Hi', 'Hi; Hi']
+  split = 'Hi, Hi; Hi'.split(RegExp(r'[,;]+ '));
+  print('splitting with RegExp: $split'); // ['Hi', 'Hi', 'Hi']
 
-  List<String> colours = ['blue', 'white', 'red'];
+  List<String> colours = ['red', 'white', 'blue'];
   String flag = colours.join(' ');
-  print(flag); // blue white red
+  print('The flag is: $flag'); // The flag is: red white blue
 }
