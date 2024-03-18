@@ -52,6 +52,15 @@ void main() {
   // // Output: Alice is 20 years old
   // //         Bob is 25 years old
   // //         Charlie is 30 years old
+
+  // List<int> marks = [100, 60, 40, 87, 54];
+  // print('In the first in-class test, I got %${marks.first}');
+  // print('In the second in-class test, I got %${marks[1]}');
+  // print('But in the last courswork, my mark was ${marks.last}');
+  // int numberOfMarks = marks.length;
+  // int lastIndex = numberOfMarks - 1;
+  // marks[lastIndex] = 90;
+  // print('After the remark, my last mark is ${marks.last} 😂');
 }
 
 void iterateString(String text) {
