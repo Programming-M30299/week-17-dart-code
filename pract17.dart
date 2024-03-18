@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   iterateString('Hello, World!');
   iterateString('👨‍👩‍👧‍👦');
@@ -84,4 +86,31 @@ void stringChecker(String text, String substring) {
     output += 'the text does not contain the substring';
 
   print(output);
+}
+
+// List<bool> getAvailability() {
+//   List<bool> availability = List.filled(7, true);
+//   for (int i = 0; i < 7; i++) {
+//     print('Do you have any classes on day ${i + 1}? (yes/no)');
+//     String? response = stdin.readLineSync();
+//     if (response == 'yes') {
+//       availability[i] = false;
+//     }
+//   }
+//   return availability;
+// }
+
+// The same function but with a for-in loop
+List<bool> getAvailability() {
+  List<bool> availability = List.filled(7, true);
+  List<String> days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+  for (String day in days) {
+    print('Do you have any classes on $day? (yes/no)');
+    String? response = stdin.readLineSync();
+    if (response == 'yes') {
+      int index = days.indexOf(day);
+      availability[index] = false;
+    }
+  }
+  return availability;
 }
