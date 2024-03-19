@@ -114,3 +114,17 @@ List<bool> getAvailability() {
   }
   return availability;
 }
+
+void addAndRemoveElements() {
+  List<String> fruits = ['Apple', 'Banana', 'Cherry'];
+  print('Initial list: $fruits');
+  
+  fruits.add('Pear');
+  print('Added Pear: $fruits');
+  
+  fruits.insert(1, 'Blueberry');
+  print('Inserted Blueberry at index 1: $fruits');
+  
+  fruits.remove('Banana');
+  print('Removed Banana: $fruits');
+}
