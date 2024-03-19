@@ -112,6 +112,7 @@ We've already seen collections in Python. Let's see how they are used in Dart.
 ### List
 
 #### Defining a list
+
 To store the names of our customers in a shop in a list, we can use the following code:
 
 ```dart
@@ -168,6 +169,7 @@ To remove an element from a list, you can use the `remove` method:
 
 We've already seen examples of iterating over a list using a `for` loop.
 In this example, we are adding 10 to each element of the list if it is less than 90, and setting it to 100 otherwise:
+
 ```dart
   List<int> marks = [77, 90, 64, 92, 0];
   for (int i = 0; i < marks.length; i++) {
@@ -226,7 +228,6 @@ Here is another example which shows how we can update a specific value in a two-
 
 For more information on Lists, refer to the documentation page:
 https://api.flutter.dev/flutter/dart-core/List-class.html
-
 
 ### Set
 
