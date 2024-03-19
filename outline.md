@@ -231,11 +231,46 @@ https://api.flutter.dev/flutter/dart-core/List-class.html
 
 ### Set
 
-#### Defining a set
+#### Defining a set and adding elements
 
-#### Adding and removing elements
+A set is an unordered collection of unique elements.
+We have already seen them in Python.
+Here is how you can define a set in Dart:
+
+```dart
+  Set<String> modules = {'Programming', 'Networks', 'Core Computing'};
+  print(modules); // {Programming, Networks, Core Computing}
+  modules.add('Database');
+  print(modules); // {Programming, Networks, Core Computing, Database}
+  modules.add('Programming');
+  print(modules); // {Programming, Networks, Core Computing, Database} (no duplicates)
+```
+
+#### Removing elements
+
+You can remove an element from a set using the `remove` method:
+
+```dart
+  modules = {'Programming', 'Networks', 'Core Computing'};
+  modules.remove('Networks');
+  print(modules); // {Programming, Core Computing}
+  modules.remove('Databases');
+  print(modules); // {Programming, Core Computing} (no change)
+```
 
 #### Iterating over a set using a `for-in` loop
+
+To iterate over a set, you can use a `for-in` loop (same as with lists):
+
+```dart
+  Set<String> modules = {'Programming', 'Networks', 'Core Computing'};
+  for (String module in modules) {
+    print(module);
+  }
+```
+Note that you cannot access elements of a set by index, as sets are unordered.
+Additionally, you cannot modify elements of a set when iterating over it.
+To update an element, you need to remove it and add a new one.
 
 ### Map
 
