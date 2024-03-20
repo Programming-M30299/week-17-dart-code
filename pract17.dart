@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() {
-  print('Uncommend the code in this file to run it');
+  print('Uncomment the code in this file to run it');
 
   // iterateString('Hello, World!');
   // iterateString('👨‍👩‍👧‍👦');
