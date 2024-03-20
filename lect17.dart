@@ -8,6 +8,14 @@ void main() {
   // iteratingLists(); // Uncomment to run
 
   // multiDimentionalLists(); // Uncomment to run
+
+  // setDemo(); // Uncomment to run
+}
+
+void setDemo() {
+  Set<String> modules = {'Programming', 'Networks', 'Core Computing'};
+  modules.add('Database');
+  modules.add('Programming'); // No effect, 'Programming' is already in the set
 }
 
 void stringDemo1() {
