@@ -16,6 +16,11 @@ void setDemo() {
   Set<String> modules = {'Programming', 'Networks', 'Core Computing'};
   modules.add('Database');
   modules.add('Programming'); // No effect, 'Programming' is already in the set
+  print(modules); // {Programming, Networks, Core Computing, Database}
+
+  modules.remove('Networks'); // Removes 'Networks'
+  modules.remove('Databases'); // No effect, 'Databases' is not in the set
+  print(modules); // {Programming, Core Computing, Database}
 }
 
 void stringDemo1() {
