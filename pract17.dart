@@ -1,10 +1,55 @@
 import 'dart:io';
 
 void main() {
-  iterateString('Hello, World!');
-  iterateString('👨‍👩‍👧‍👦');
-  iterateString('Café');
+  print('Uncommend the code in this file to run it');
 
+  // iterateString('Hello, World!');
+  // iterateString('👨‍👩‍👧‍👦');
+  // iterateString('Café');
+
+  // substringDemo();
+
+  // String line = 'Stella! Hey Stella!';
+  // print(line.toUpperCase());
+  // print(line.toLowerCase());
+
+  // stringChecker('Hello, World!', 'World');
+  // stringChecker('Hello, World!', 'World!');
+  // stringChecker('Hello, World!', 'Hello, World!');
+  // stringChecker('Hello, World!', 'o');
+  // stringChecker('Hello, World!', 'Moon');
+
+  // String littleWomen = 'Jo and Beth and Amy and Meg';
+  // for (String name in littleWomen.split(' and ')) {
+  //   print(name);
+  // }
+
+  // stringSplitDemo();
+
+  // listDemo();
+}
+
+void listDemo() {
+  List<int> marks = [100, 60, 40, 87, 54];
+  print('In the first in-class test, I got %${marks.first}');
+  print('In the second in-class test, I got %${marks[1]}');
+  print('But in the last courswork, my mark was ${marks.last}');
+  int numberOfMarks = marks.length;
+  int lastIndex = numberOfMarks - 1;
+  marks[lastIndex] = 90;
+  print('After the remark, my last mark is ${marks.last} 😂');
+}
+
+void stringSplitDemo() {
+  String letters = 'abcdefg';
+  List<String> splitted = letters.split('');
+  print(splitted[2]);
+
+  String joined = splitted.join(' ');
+  print(joined);
+}
+
+void substringDemo() {
   String postcode = 'PO13HF';
   int startIndex = 3, endIndex = 5;
   print('The substring of "$postcode" from $startIndex to $endIndex is ' +
@@ -13,56 +58,6 @@ void main() {
       postcode.substring(startIndex));
   print('The last 3 characters of "$postcode" are ' +
       postcode.substring(postcode.length - 3));
-
-  String line = 'Stella! Hey Stella!';
-  print(line.toUpperCase());
-  print(line.toLowerCase());
-
-  stringChecker('Hello, World!', 'World');
-  stringChecker('Hello, World!', 'World!');
-  stringChecker('Hello, World!', 'Hello, World!');
-  stringChecker('Hello, World!', 'o');
-  stringChecker('Hello, World!', 'Moon');
-
-  String littleWomen = 'Jo and Beth and Amy and Meg';
-  for (String name in littleWomen.split(' and ')) {
-    print(name);
-  }
-
-  String letters = 'abcdefg';
-  List<String> splitted = letters.split('');
-  print(splitted[2]);
-
-  String joined = splitted.join(' ');
-  print(joined);
-
-  // print('Hello, World!');
-  // List<int> numbers = [1, 2, 3, 4, 5];
-  // var squares = numbers.map((number) => number * number);
-  // print(squares.toList()); // Output: [1, 4, 9, 16, 25]
-
-  // numbers = [1, 2, 3, 4, 5];
-  // var sum = numbers.reduce((value, element) => value + element);
-  // print(sum); // Output: 15
-
-  // Set<int> numbersSet = {1, 2, 3, 4, 5};
-  // var evenNumbers = numbersSet.where((number) => number % 2 == 0);
-  // print(evenNumbers.toSet()); // Output: {2, 4}
-
-  // Map<String, int> ages = {'Alice': 20, 'Bob': 25, 'Charlie': 30};
-  // ages.forEach((key, value) => print('$key is $value years old'));
-  // // Output: Alice is 20 years old
-  // //         Bob is 25 years old
-  // //         Charlie is 30 years old
-
-  // List<int> marks = [100, 60, 40, 87, 54];
-  // print('In the first in-class test, I got %${marks.first}');
-  // print('In the second in-class test, I got %${marks[1]}');
-  // print('But in the last courswork, my mark was ${marks.last}');
-  // int numberOfMarks = marks.length;
-  // int lastIndex = numberOfMarks - 1;
-  // marks[lastIndex] = 90;
-  // print('After the remark, my last mark is ${marks.last} 😂');
 }
 
 void iterateString(String text) {
@@ -118,13 +113,13 @@ List<bool> getAvailability() {
 void addAndRemoveElements() {
   List<String> fruits = ['Apple', 'Banana', 'Cherry'];
   print('Initial list: $fruits');
-  
+
   fruits.add('Pear');
   print('Added Pear: $fruits');
-  
+
   fruits.insert(1, 'Blueberry');
   print('Inserted Blueberry at index 1: $fruits');
-  
+
   fruits.remove('Banana');
   print('Removed Banana: $fruits');
 }
