@@ -9,7 +9,7 @@ void main() {
 
   // multiDimentionalLists(); // Uncomment to run
 
-  // setDemo(); // Uncomment to run
+  setDemo(); // Uncomment to run
 }
 
 void setDemo() {
@@ -21,6 +21,13 @@ void setDemo() {
   modules.remove('Networks'); // Removes 'Networks'
   modules.remove('Databases'); // No effect, 'Databases' is not in the set
   print(modules); // {Programming, Core Computing, Database}
+
+  print('Is "Programming" in the set? ${modules.contains('Programming')}');
+
+  print('Modules:');
+  for (String module in modules) {
+    print(module);
+  }
 }
 
 void stringDemo1() {
