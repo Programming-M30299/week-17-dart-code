@@ -268,21 +268,90 @@ To iterate over a set, you can use a `for-in` loop (same as with lists):
     print(module);
   }
 ```
+
 Note that you cannot access elements of a set by index, as sets are unordered.
 Additionally, you cannot modify elements of a set when iterating over it.
 To update an element, you need to remove it and add a new one.
 
 ### Map
 
-#### Defining a map
+#### Defining a map, adding and accessing elements
 
-#### Accessing elements
+A map is a collection of key-value pairs (in Python, we call them dictionaries). Here is an example of a map that stores a student's marks for different modules
 
-#### Adding and removing elements
+We can access a value associated to a key using the square brackets (and provide the key). Similarly we can update the value associated with a key or creating an entirely new pair of key and values by assigning a new value to a key.
+The `remove` method removes a pair given its key. We can also add new entries to the map by specifying a new key-value pair.
+
+To see if a map contains a key or a value, we can use the `containsKey` and `containsValue` methods, respectively.
+
+```dart
+  Map<String, int> marks = {
+    'Programming': 67,
+    'Networks': 90,
+    'Core Computing': 54
+  };
+  print(marks); // {Programming: 77, Networks: 90, Core Computing: 64}
+
+  // Accessing elements
+  print('Marks for Networks: ${marks['Networks']}'); // Marks for Networks: 90
+  // Capping the mark for Networks to 40%
+  marks['Networks'] = 40;
+  print('Marks for Networks: ${marks['Networks']}'); // Marks for Networks: 40
+
+  // Removing the mark for Programming
+  marks.remove('Programming');
+
+
+  // Adding mark for Databases
+  marks['Databases'] = 78;
+  print(marks); // {Programming: 77, Networks: 90, Core Computing: 64, Databases: 78}
+
+  // Check if a key exists
+  print(marks.containsKey('Programming')); // false
+  // Check if a value exists
+  print(marks.containsValue(40)); // true
+```
 
 #### Iterating over a map using a `for-in` loop
 
+To iterate over a map, you can use a `for-in` loop (the same as with sets and lists). Note that maps are unordered, so the order of the elements may not be the same as the order in which they were added and we can't access elements by index. Notice that we are using the `keys` property to get the keys of the map.
+
+```dart
+  Map<String, int> marks = {
+    'Programming': 77,
+    'Networks': 90,
+    'Core Computing': 64
+  };
+  for (String module in marks.keys) {
+    print('The mark for $module is ${marks[module]}');
+  }
+```
+
 #### Collections as values in a map
+
+You can store collections (lists, sets, or maps) as values in a map. In this example we are storing the individual marks for each assessment of a module (as opposed to a single mark for each module):
+
+```dart
+  Map<String, List<int>> marks = {
+    'Programming': [77, 80, 70],
+    'Networks': [90, 85, 95],
+    'Core Computing': [64, 60, 70]
+  };
+  for (String module in marks.keys) {
+    print('The marks for $module are ${marks[module]}');
+  }
+```
+
+For another example, we have a map where the keys are the order IDs and the values are a set of food items that the order contains in a fast food restaurant:
+
+```dart
+  Map<int, Set<String>> orders = {
+    1: {'🍔', '🍟', '🥤'},
+    2: {'🍕', '🍦'},
+    3: {'🍔', '🍟', '🍦'},
+  };
+  print('Order 2 contains: ${orders[2]}');
+```
 
 ## Higher order functions and collections
 
