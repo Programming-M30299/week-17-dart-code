@@ -1,7 +1,5 @@
 import 'dart:io';
 
-import 'lect17.dart';
-
 void main() {
   print('Uncomment the code in this file to run it');
 
@@ -131,12 +129,14 @@ void listDemo() {
 void setDemo() {
   Set<int> numbers = {1, 2, 3, 4};
   print('Initial set: $numbers');
+  print('Length of the set: ${numbers.length}');
+
+  numbers.add(5);
+  print('After adding 5: $numbers');
 
   numbers.add(2);
-  print('After adding duplicate: $numbers');
+  print('After adding 2: $numbers');
 
   numbers.remove(3);
   print('After removing 3: $numbers');
-
-  print('Length of the set: ${numbers.length}');
 }
