@@ -30,7 +30,7 @@ void main() {
 
   // setDemo();
 
-  setIteration();
+  // setIteration();
 }
 
 void substringDemo() {
@@ -132,6 +132,7 @@ void setDemo() {
   Set<int> numbers = {1, 2, 3, 4};
   print('Initial set: $numbers');
   print('Length of the set: ${numbers.length}');
+  print('Is 3 in the set? ${numbers.contains(3)}');
 
   numbers.add(5);
   print('After adding 5: $numbers');
