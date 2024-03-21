@@ -29,6 +29,8 @@ void main() {
   // listDemo();
 
   // setDemo();
+
+  setIteration();
 }
 
 void substringDemo() {
@@ -139,4 +141,16 @@ void setDemo() {
 
   numbers.remove(3);
   print('After removing 3: $numbers');
+}
+
+void setIteration() {
+  Set<String> fruits = {'apple', 'banana', 'orange'};
+  print('Fruits:');
+  for (String fruit in fruits) {
+    print(fruit);
+    fruit = fruit.toUpperCase(); // This doesn't change the set
+  }
+
+  // Checking if the set is still the same
+  print(fruits);
 }
