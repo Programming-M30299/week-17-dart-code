@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'lect17.dart';
+
 void main() {
   print('Uncomment the code in this file to run it');
 
@@ -27,26 +29,8 @@ void main() {
   // stringSplitDemo();
 
   // listDemo();
-}
 
-void listDemo() {
-  List<int> marks = [100, 60, 40, 87, 54];
-  print('In the first in-class test, I got %${marks.first}');
-  print('In the second in-class test, I got %${marks[1]}');
-  print('But in the last courswork, my mark was ${marks.last}');
-  int numberOfMarks = marks.length;
-  int lastIndex = numberOfMarks - 1;
-  marks[lastIndex] = 90;
-  print('After the remark, my last mark is ${marks.last} 😂');
-}
-
-void stringSplitDemo() {
-  String letters = 'abcdefg';
-  List<String> splitted = letters.split('');
-  print(splitted[2]);
-
-  String joined = splitted.join(' ');
-  print(joined);
+  // setDemo();
 }
 
 void substringDemo() {
@@ -81,6 +65,15 @@ void stringChecker(String text, String substring) {
     output += 'the text does not contain the substring';
 
   print(output);
+}
+
+void stringSplitDemo() {
+  String letters = 'abcdefg';
+  List<String> splitted = letters.split('');
+  print(splitted[2]);
+
+  String joined = splitted.join(' ');
+  print(joined);
 }
 
 // List<bool> getAvailability() {
@@ -122,4 +115,28 @@ void addAndRemoveElements() {
 
   fruits.remove('Banana');
   print('Removed Banana: $fruits');
+}
+
+void listDemo() {
+  List<int> marks = [100, 60, 40, 87, 54];
+  print('In the first in-class test, I got %${marks.first}');
+  print('In the second in-class test, I got %${marks[1]}');
+  print('But in the last coursework, my mark was ${marks.last}');
+  int numberOfMarks = marks.length;
+  int lastIndex = numberOfMarks - 1;
+  marks[lastIndex] = 90;
+  print('After the remark, my last mark is ${marks.last} 😂');
+}
+
+void setDemo() {
+  Set<int> numbers = {1, 2, 3, 4};
+  print('Initial set: $numbers');
+
+  numbers.add(2);
+  print('After adding duplicate: $numbers');
+
+  numbers.remove(3);
+  print('After removing 3: $numbers');
+
+  print('Length of the set: ${numbers.length}');
 }
