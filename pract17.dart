@@ -63,6 +63,8 @@ void main() {
   // };
   // priceRise(prices);
   // print('After price rises: $prices');
+
+  // listOfMapsDemo();
 }
 
 void substringDemo() {
@@ -210,4 +212,36 @@ void priceRise(Map<String, double> productPrices) {
     print('Price of milk is £${productPrices['Milk']}');
   }
   productPrices['Milk'] = productPrices['Milk']! + 0.20;
+}
+
+void listOfMapsDemo() {
+  List<Map<String, Object>> games = [
+    {
+      'title': 'Call of Duty',
+      'price': 49.99,
+      'platforms': ['PlayStation', 'Xbox', 'PC']
+    },
+    {
+      'title': 'Warhammer',
+      'price': 29.99,
+      'platforms': ['PC', 'macOS']
+    },
+    {
+      'title': 'Fortnite',
+      'price': 0.00,
+      'platforms': ['PlayStation', 'Xbox', 'PC'],
+    },
+  ];
+  for (Map<String, Object> game in games) {
+    print('${game['title']} costs £${game['price']}'
+        ' and is available on ${game['platforms']}');
+  }
+
+  for (Map<String, Object> game in games) {
+    List<String> platforms = game['platforms'] as List<String>;
+    if (platforms.contains('PlayStation')) {
+      print('${game['title']} costs £${game['price']}'
+          ' and is available on PlayStation');
+    }
+  }
 }
