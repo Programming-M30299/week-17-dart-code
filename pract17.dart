@@ -31,6 +31,11 @@ void main() {
   // setDemo();
 
   // setIteration();
+
+  Map<int, String> orders = createOrders();
+  for (int orderNumber in orders.keys) {
+    print('Order $orderNumber: ${orders[orderNumber]}');
+  }
 }
 
 void substringDemo() {
@@ -155,3 +160,21 @@ void setIteration() {
   // Checking if the set is still the same
   print(fruits);
 }
+
+Map<int, String> createOrders() {
+  Map<int, String> orders = {
+    1: 'Milkshake',
+    2: 'Burger',
+    3: 'Chicken wrap',
+  };
+  print('Initial orders: $orders');
+
+  orders[4] = 'Salad';
+  print('Added Salad: $orders');
+
+  orders.remove(2);
+  print('Removed Burger: $orders');
+
+  return orders;
+}
+
