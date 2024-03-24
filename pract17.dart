@@ -28,6 +28,23 @@ void main() {
 
   // listDemo();
 
+  // List<List<double>> matrix = [
+  //   [9.7, 8.4, 7.6],
+  //   [0.9, 0.8, 0.7],
+  //   [6.5, 5.3, 4.2],
+  //   [3.1, 2.6, 1.7],
+  // ];
+
+  // print('First row: ${matrix[0]}');
+  // print('Second element of the third row: ${matrix[2][1]}');
+
+  // for (int row = 0; row < matrix.length; row++) {
+  //   for (int col = 0; col < matrix[row].length; col++) {
+  //     stdout.write('${matrix[row][col]} ');
+  //   }
+  //   print(''); // New line
+  // }
+
   // setDemo();
 
   // setIteration();
@@ -177,4 +194,3 @@ Map<int, String> createOrders() {
 
   return orders;
 }
-
