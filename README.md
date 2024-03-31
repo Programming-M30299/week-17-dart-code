@@ -23,13 +23,19 @@ Then, run the code with the `dart` command, for example:
 dart pract17.dart
 ```
 
-Analyze the code with the `dart analyze` command, for example:
+Auto-format your code (e.g., fix indentation and spacing) using the `dart format` command, for example:
+
+```bash
+dart format pract17.dart
+```
+
+Analyze to find issues with the code using the `dart analyze` command, for example:
 
 ```bash
 dart analyze pract17.dart
 ```
 
-Fix the automatically detected issues with the `dart fix` command, for example:
+And finally, fix the automatically detected issues with the `dart fix` command, for example:
 
 ```bash
 dart fix pract17.dart
