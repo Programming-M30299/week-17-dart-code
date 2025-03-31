@@ -7,7 +7,7 @@ void main() {
 
   // iteratingLists(); // Uncomment to run
 
-  // multiDimentionalLists(); // Uncomment to run
+  // multiDimensionalLists(); // Uncomment to run
 
   setDemo(); // Uncomment to run
 }
@@ -124,7 +124,7 @@ void iteratingLists() {
   print('Average mark is: $average'); // Average mark is: 74.2
 }
 
-void multiDimentionalLists() {
+void multiDimensionalLists() {
   // A 3x3 matrix (2D list of lists)
   List<List<int>> matrix = [
     [1, 2, 3],
